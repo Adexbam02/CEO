@@ -1,12 +1,3 @@
-// change navbar
-
-
-// Clear the input field after user press submit
-
-// function clearInput() {
-//     document.querySelectorAll("input-field").value = "";
-// }
-
 // SIGN-UP POPUP
 let popup = document.getElementById("popup");
 
