@@ -326,6 +326,7 @@ nav button {
 /* ================= FOOTER ================= */
 footer {
   background: rgb(37, 37, 37);
+  color: var(--thirdColor);
 
   height: 30vh;
   width: 100%;

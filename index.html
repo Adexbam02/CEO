@@ -353,30 +353,10 @@
                 <a href="Terms.html">Terms</a>
             </div>
         </div>
+        <div class="footer__copyright">
+            <small>Copyright &copy; CEOWHATSAPPSTATUS. All Rights Reserved</small>
+        </div>
     </footer>
-
-
-    <script>
-        function validateForm(event) {
-          var form = document.getElementById("myForm");
-          var inputs = form.querySelectorAll("input");
-          var isValid = true;
-          inputs.forEach(function(input) {
-            if (input.value.trim() === "") {
-              isValid = false;
-            }
-          });
-          if (!isValid) {
-            event.preventDefault();
-            alert("Please fill in all fields!");
-          } else {
-            // form is valid, submit it
-            form.submit();
-            // redirect to another page
-            window.location.href = "submit.html";
-          }
-        }
-        </script>
 
     <!-- JAVASCRIPT LINK -->
     <script src="main.js"></script>
