@@ -56,32 +56,34 @@
                             <option value="premium">Premium Package</option>
                         </select>
 
-                        <form action="" method="" class="signupForm">
-                        <div class="formName">
-                            <input type="text" name="FullName" class="fullName" placeholder="Fullname" required>
-                        </div>
+                        <form action="https://formspree.io/f/xknaoapp" method="POST" class="signupForm">
+                            <div class="formName">
+                                <input type="text" name="FullName" class="fullName" placeholder="Fullname" required>
+                            </div>
 
-                        <div class="numEmail">
-                            <span>
-                                <!-- COUNTRY CODE -->
-                                <select id="countryCode" name="countryCode" class="countryCode">
-                                    <option value="1">+1</option> 
-                                    <option value="2">+2</option>
-                                </select>
-                                <!-- MOBILE NUMBER -->
-                                <input type="number" class="number" maxlength="15" pattern="\d{1,15}" name="Nubmer" placeholder="80 0000 0000" required>
-                            </span>
-                            <!-- EMAIL -->
-                            <input type="email" name="Email Address" placeholder="Your Email">
-                        </div>
+                            <div class="numEmail">
+                                <span>
+                                    <!-- COUNTRY CODE -->
+                                    <select id="countryCode" name="countryCode" class="countryCode">
+                                        <option value="1">+1</option> 
+                                        <option value="2">+2</option>
+                                    </select>
+                                    <!-- MOBILE NUMBER -->
+                                    <input type="number" class="number" maxlength="15" pattern="\d{1,15}" name="Nubmer" placeholder="80 0000 0000" required>
+                                </span>
+                                <!-- EMAIL -->
+                                <input type="email" name="Email Address" placeholder="Your Email">
+                            </div>
 
-                        <!-- CHECKBOX -->
-                        <label class="termsLabel">
-                            <input type="checkbox" class="checkbox" name="agree" value="yes" required>
-                            <a href="Terms.html" class="termsC">I agree to the terms and conditions</a>
-                        </label>
+                            <!-- CHECKBOX -->
+                            <label class="termsLabel">
+                                <input type="checkbox" class="checkbox" name="agree" value="yes" required>
+                                <a href="Terms.html" class="termsC">I agree to the terms and conditions</a>
+                            </label>
 
-                        <button type="submit" class="btn btn-primary" >Submit</button>
+                            <!-- <a href="submit.html" type="submit"> -->
+                                <button type="submit" class="btn btn-primary" >Submit</button>
+                        </form>    
                     </div>
 
                     <div class="signRight">
@@ -98,7 +100,7 @@
 
                     <div>
                         <button type="button" class="btn" onclick="openPopup()">TRY NOW</button>
-                        <button type="button" class="btn">Download</button>
+                        <a href="download.html"><button type="button" class="btn">Download</button></a> 
                     </div>
                 </div>
 
@@ -144,8 +146,7 @@
 
                                     <!-- <h4>Alina <br> Gomez</h4> -->
                                     <div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, architecto
-                                            quasi iusto, aliquid dolores </p>
+                                        <p>"This is Exceptional"</p>
                                     </div>
                                 </div>
                             </article>
@@ -228,7 +229,7 @@
                     </article>
 
                     <article>
-                        <span><i class="uil uil-shield-exclamation"></i></i></span>
+                        <span><i class="uil uil-shield-exclamation"></i></span>
                         <h3>Secure Password</h3>
                         <p>After your successful payment, you will be given a unique
                             password which will be required to download the contact file.
@@ -353,6 +354,29 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        function validateForm(event) {
+          var form = document.getElementById("myForm");
+          var inputs = form.querySelectorAll("input");
+          var isValid = true;
+          inputs.forEach(function(input) {
+            if (input.value.trim() === "") {
+              isValid = false;
+            }
+          });
+          if (!isValid) {
+            event.preventDefault();
+            alert("Please fill in all fields!");
+          } else {
+            // form is valid, submit it
+            form.submit();
+            // redirect to another page
+            window.location.href = "submit.html";
+          }
+        }
+        </script>
 
     <!-- JAVASCRIPT LINK -->
     <script src="main.js"></script>
