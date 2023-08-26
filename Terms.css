@@ -59,8 +59,8 @@
 
 @media screen and (min-width: 480px) and (max-width: 767px){
   nav .navBar{
-    /* background: red; */
-    padding: 0 2rem;}
+    padding: 0 2rem;
+  }
 
   .TC {padding: 6rem 2rem 6rem 2rem;}
 
